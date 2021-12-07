@@ -10,6 +10,7 @@ class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=2000)
     text = models.TextField()
+    text2 = models.TextField(blank=True, null=True)
     created_data = models.DateTimeField(default=timezone.now)
     published_data = models.DateTimeField(blank=True, null=True)
 
